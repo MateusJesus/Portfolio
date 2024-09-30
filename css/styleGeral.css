@@ -1,0 +1,81 @@
+body {
+    font-family: var(--ff);
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--bg);
+}
+
+.cab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2.5em;
+}
+
+.cab a {
+    margin: 0em 0em 0em 4em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content {
+    height: 100vh;
+    padding: 0 5em;
+}
+
+.logo {
+    max-height: 2.5em;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: var(--fs_title);
+    color: var(--fc_title);
+    font-weight: 700;
+}
+
+.dest {
+    color: var(--dest);
+    text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5), 0 0 0.25em currentColor;
+}
+
+
+.button {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.button:focus,
+.button:hover {
+    color: var(--white);
+}
+
+.button:focus:after,
+.button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--white);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 200ms;
+    transition-property: width, left;
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    --ff: "Inter", sans-serif;
+    --ff-tec: "Roboto Slab", system-ui;
+    --dest: #00dfa2;
+    --destOP: #00dfa768;
+    
+    --text-color: #f4f4f4;
+    --white:#f4f4f4;
+
+    --title-color: #00dfa2;
+    --fs_title: 30px;
+    --fc_title: #f4f4f4;
+    --bg: #242424;
+    --bg-tec: #1b1b1b;
+}
+
+/* .dark_mode {
+    --color-1: #333;
+    --color-2: #444;
+    --color-3: #1b1b1b;
+    --color-4: #141414;
+    --bg: #101010;
+    --title-color: #d0d0d0;
+    --text-color: #adadad;
+    --white: #e8e8e8;
+} */
