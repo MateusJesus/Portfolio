@@ -1,6 +1,5 @@
 body {
     font-family: var(--ff);
-    font-weight: 400;
     color: var(--text-color);
     background-color: var(--bg);
 }
@@ -11,12 +10,6 @@ section {
     align-items: center;
     width: 100%;
 }
-
-.content {
-    height: 100vh;
-    padding: 0 5em;
-}
-
 
 .title {
     text-transform: uppercase;

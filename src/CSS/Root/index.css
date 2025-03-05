@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 :root {
-    --ff: "Inter", sans-serif;
+    --ff: "Inter";
     --ff-tec: "Roboto Slab", system-ui;
     --dest: #00dfa2;
     --destOP: #00dfa768;
     
     --text-color: #f4f4f4;
-    --white:#f4f4f4;
+    --white:#B3B3B3;
 
     --title-color: #00dfa2;
     --fs_title: 30px;
