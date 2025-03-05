@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router";
 import styled from "styled-components";
 
 const NavButtonStyled = styled.div`
-  color: var(--white);
+  color: var(--text-color);
 
   .nav_button {
     cursor: pointer;

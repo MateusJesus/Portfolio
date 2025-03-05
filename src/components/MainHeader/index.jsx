@@ -8,12 +8,19 @@ import { motion } from "framer-motion";
 const HeaderStyled = styled.header`
   font-weight: 300;
   user-select: none;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
   .cab {
+    padding:1em 0;
+    max-width: 1080px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 2.5em;
   }
 
   .logo {

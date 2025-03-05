@@ -1,0 +1,49 @@
+{
+  "tec": [
+    {
+      "name": "html",
+      "image": "/src/assets/icontec/html.png",
+      "alt": "Logo do html"
+    },
+    {
+      "name": "css",
+      "image": "/src/assets/icontec/css.png",
+      "alt": "Logo do css"
+    },
+    {
+      "name": "javascript",
+      "image": "/src/assets/icontec/javascript.png",
+      "alt": "Logo do javascript"
+    },
+    {
+      "name": "php",
+      "image": "/src/assets/icontec/php.png",
+      "alt": "Logo do php"
+    },
+    {
+      "name": "mysql",
+      "image": "/src/assets/icontec/mysql.png",
+      "alt": "Logo do mysql"
+    },
+    {
+      "name": "xampp",
+      "image": "/src/assets/icontec/xampp.png",
+      "alt": "Logo do xampp"
+    },
+    {
+      "name": "bootstrap",
+      "image": "/src/assets/icontec/bootstrap.png",
+      "alt": "Logo do bootstrap"
+    },
+    {
+      "name": "vscode",
+      "image": "/src/assets/icontec/vscode.png",
+      "alt": "Logo do vscode"
+    },
+    {
+      "name": "figma",
+      "image": "/src/assets/icontec/figma.png",
+      "alt": "Logo do figma"
+    }
+  ]
+}
