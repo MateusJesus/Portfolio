@@ -1,21 +1,25 @@
 import styled from "styled-components";
-import logo from "../../assets/logo.png";
+import logo from "@/assets/logo.png";
 import NavButton from "../Buttons/NavButton";
 import { Link, useLocation } from "react-router";
 import ActionButton from "../Buttons/ActionButton";
 import { motion } from "framer-motion";
 
 const HeaderStyled = styled.header`
+  z-index: 1;
   font-weight: 300;
   user-select: none;
+  height: 70px;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: solid #333333 1px;
   width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(36, 36, 36, 0.7);
 
   .cab {
-    padding:1em 0;
     max-width: 1080px;
     width: 100vw;
     display: flex;
@@ -38,23 +42,22 @@ const HeaderStyled = styled.header`
 
   .slider {
     position: absolute;
-    bottom: -3px;
-    height: 1px;
+    bottom: -26px;
+    height: 2px;
     width: 100%;
     box-shadow: 0 0 10px var(--dest);
     background: var(--dest);
-    border-radius: 1px;
+    //border-radius: 1px;
   }
 `;
 
 export default function MainHeader() {
-  const location = useLocation();
-
   const navPages = [
     { path: "/", text: "Página inicial" },
     { path: "/about-me", text: "Sobre Mim" },
     { path: "/projects", text: "Projetos" },
   ];
+  const location = useLocation();
 
   return (
     <HeaderStyled>
@@ -74,8 +77,8 @@ export default function MainHeader() {
                   <motion.div
                     className="slider"
                     layoutId="underline"
-                    id="underline"
                     transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                    style={{ transform: "none" }}
                   />
                 ) : (
                   ""

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import perfil from "../../assets/perfil.png";
+import perfil from "@/assets/perfil.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faWhatsapp,
@@ -13,9 +13,6 @@ const HomePageStyled = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  max-width: 1080px;
-  margin: auto;
-  height: 100vh;
   img {
     height: 30em;
   }
@@ -52,7 +49,7 @@ const SocialStyled = styled.div`
 
 export default function Introduction() {
   return (
-    <HomePageStyled>
+    <HomePageStyled className="layout">
       <div>
         <h1 className="title">
           DESENVOLVEDOR <strong className="dest">FRONTEND</strong>

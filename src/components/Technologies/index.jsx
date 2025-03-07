@@ -2,11 +2,12 @@ import styled from "styled-components";
 import background1 from "@/assets/background1.svg";
 import background2 from "@/assets/background2.svg";
 import DataTechnogies from "@/data/DataTechnologies";
-import ItemTec from "./ItemTec"; // Corrigido para a letra maiúscula
+import ItemTec from "./ItemTec";
 
 const TechnologiesStyled = styled.section`
-  background-color: var(--dest);
   position: relative;
+  background-color: var(--dest);
+  margin: 0;
 
   .tecnologias {
     margin: auto;
@@ -21,6 +22,7 @@ const TechnologiesStyled = styled.section`
   }
 
   .tecnologias .title {
+    color: var(--bg);
     font-weight: 400;
   }
 
@@ -40,25 +42,32 @@ const TechnologiesStyled = styled.section`
 
   .tec_background2 {
     width: 100%;
-    position: absolute;
     user-select: none;
     background-color: var(--dest);
   }
 `;
 
+const TecBackground = styled.img`
+  width: 100%;
+  user-select: none;
+  background-color: var(--dest);
+`;
+
 export default function Technologies() {
   return (
-    <TechnologiesStyled>
-      <img className="tec_background1" src={background1} />
-      <div className="tecnologias">
-        <h1 className="title">Minhas tecnologias</h1>
-        <ul className="lista">
-          {DataTechnogies.tec.map((item, index) => (
-            <ItemTec key={index} technologies={item} />
-          ))}
-        </ul>
-      </div>
-      <img className="tec_background2" src={background2} />
-    </TechnologiesStyled>
+    <>
+      <TechnologiesStyled>
+      <TecBackground className="tec_background1" src={background1} />
+        <div className="tecnologias">
+          <h1 className="title">Minhas tecnologias</h1>
+          <ul className="lista">
+            {DataTechnogies.tec.map((item, index) => (
+              <ItemTec key={index} technologies={item} />
+            ))}
+          </ul>
+        </div>
+      </TechnologiesStyled>
+      <TecBackground className="tec_background2" src={background2} />
+    </>
   );
 }

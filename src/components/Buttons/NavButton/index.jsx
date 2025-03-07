@@ -24,7 +24,13 @@ export default function NavButton({ path, children }) {
 
   return (
     <NavButtonStyled>
-      <Link className={`nav_button ${isActive && "active"}`} to={path}>
+      <Link
+        className={`nav_button ${isActive && "active"}`}
+        to={path}
+        onClick={() => {
+          window.scrollTo({ top: 0});
+        }}
+      >
         {children}
       </Link>
     </NavButtonStyled>

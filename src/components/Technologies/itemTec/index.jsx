@@ -28,18 +28,17 @@ const ItemTecStyled = styled.li`
 
 export default function ItemTec({ technologies }) {
   const imageUrl = new URL(technologies.image, import.meta.url).href
-  console.log(imageUrl);
   
   return (
     <ItemTecStyled>
-      <li className="item">
+      <div className="item">
         <div className="iconitem">
           <img src={imageUrl} alt={technologies.alt} />
         </div>
         <div>
           <h3 className="text">{technologies.name}</h3>
         </div>
-      </li>
+      </div>
     </ItemTecStyled>
   );
 }
