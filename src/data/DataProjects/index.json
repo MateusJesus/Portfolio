@@ -6,8 +6,8 @@
       "shortDescription": "Projeto de criação de fichas de RPG, com banco de dados.",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "http://punkzombie.rf.gd",
-      "github": "https://github.com/mateusjesus/punkzombie",
-      "image": "src/assets/imgpages/rpgpunkzombie.png",
+      "github": "https://github.com/MateusJesus/RPG-PunkZombie",
+      "image": "/src/assets/imgpages/rpgpunkzombie.png",
       "featured": true
     },
     {
@@ -17,7 +17,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "https://mateusjesus.github.io/AluraBook/",
       "github": "https://github.com/mateusjesus/AluraBook",
-      "image": "src/assets/imgpages/alurabook.png",
+      "image": "/src/assets/imgpages/alurabook.png",
       "featured": true
     },
     {
@@ -27,7 +27,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "https://aluraplus-orcin-ten.vercel.app",
       "github": "https://github.com/mateusjesus/AluraPlus",
-      "image": "src/assets/imgpages/aluraplus.png",
+      "image": "/src/assets/imgpages/aluraplus.png",
       "featured": true
     },
     {
@@ -37,7 +37,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "https://mateusjesus.github.io/spotify-fake/",
       "github": "https://github.com/mateusjesus/spotify-fake",
-      "image": "src/assets/imgpages/spotify.png",
+      "image": "/src/assets/imgpages/spotify.png",
       "featured": false
     },
     {
@@ -47,7 +47,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "https://mateusjesus.github.io/Gta-fake/",
       "github": "https://github.com/mateusjesus/Gta-fake",
-      "image": "src/assets/imgpages/gtafake.png",
+      "image": "/src/assets/imgpages/gtafake.png",
       "featured": false
     },
     {
@@ -67,7 +67,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "https://mateusjesus.github.io/FM3-Social-proof-section/",
       "github": "https://github.com/mateusjesus/FM3-Social-proof-section",
-      "image": "src/assets/imgpages/fmsocial.png",
+      "image": "/src/assets/imgpages/fmsocial.png",
       "featured": false
     }
   ]

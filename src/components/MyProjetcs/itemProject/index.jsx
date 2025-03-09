@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import RedirectButton from "../../Buttons/RedirectButton";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const ItemProjectStyled = styled.li`
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
@@ -60,10 +60,11 @@ const LinkCard = styled.div`
 
   a {
     color: var(--dest);
-    font-size: 12px;
+    font-size: 14px;
   }
 
   a:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -74,7 +75,7 @@ export default function ItemProject({ project }) {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: .4,
+        duration: 0.4,
         delay: `.${id}`,
         stiffness: 100,
         damping: 20,
@@ -86,14 +87,7 @@ export default function ItemProject({ project }) {
         </div>
         <p className="description">{project.shortDescription}</p>
         <LinkCard>
-          <a
-            className="link"
-            href={project.website}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Mais detalhes
-          </a>
+          <Link to={`${project.id}`}>Mais detalhes</Link>
           <RedirectButton href={project.website}>Visitar site</RedirectButton>
         </LinkCard>
       </ItemProjectStyled>

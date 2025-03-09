@@ -52,7 +52,7 @@ export default function Illustration({ icon1, icon2, icon3 }) {
       <motion.div
         className="icon1"
         initial={{
-          borderRadius: 0,
+          borderRadius: 5,
           opacity: 0,
           x: 10,
         }}
@@ -64,7 +64,7 @@ export default function Illustration({ icon1, icon2, icon3 }) {
                 x: 0,
               }
             : {
-                borderRadius: 0,
+                borderRadius: 5,
                 opacity: 0,
                 x: 10,
               }
@@ -79,7 +79,7 @@ export default function Illustration({ icon1, icon2, icon3 }) {
       <motion.div
         className="icon2"
         initial={{
-          borderRadius: 0,
+          borderRadius: 5,
           opacity: 0,
           x: -15,
         }}
@@ -91,7 +91,7 @@ export default function Illustration({ icon1, icon2, icon3 }) {
                 x: 0,
               }
             : {
-                borderRadius: 0,
+                borderRadius: 5,
                 opacity: 0,
                 x: -15,
               }
@@ -106,7 +106,7 @@ export default function Illustration({ icon1, icon2, icon3 }) {
       <motion.div
         className="icon3"
         initial={{
-          borderRadius: 0,
+          borderRadius: 5,
           opacity: 0,
           x: -15,
           y: 10,
@@ -120,7 +120,7 @@ export default function Illustration({ icon1, icon2, icon3 }) {
                 y: 0,
               }
             : {
-                borderRadius: 0,
+                borderRadius: 5,
                 opacity: 0,
                 x: -15,
                 y: 10,

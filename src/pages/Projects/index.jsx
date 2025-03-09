@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import MyProjects from "@/components/MyProjetcs";
 
 export default function Projects() {

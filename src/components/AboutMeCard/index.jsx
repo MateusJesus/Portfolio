@@ -7,7 +7,7 @@ import {
   faBookOpen,
   faBriefcase,
   faBuilding,
-  faHandPeace,
+  faDesktop,
   faServer,
   faDatabase,
   faCode,
@@ -108,7 +108,7 @@ export default function AboutMeCard({ item }) {
         <Illustration
           icon1={<FontAwesomeIcon icon={faBriefcase} />}
           icon2={<FontAwesomeIcon icon={faBuilding} />}
-          icon3={<FontAwesomeIcon icon={faHandPeace} />}
+          icon3={<FontAwesomeIcon icon={faDesktop} />}
         />
       )}
     </AboutMeCardStyled>

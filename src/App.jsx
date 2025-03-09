@@ -8,16 +8,36 @@ import HomePage from "./pages/HomePage";
 import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
 import MainFooter from "./components/MainFooter";
+import DetailProject from "./pages/DetailProject";
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
-        <MainHeader />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="" element={<MainHeader />}>
+            <Route
+              path=":id/*"
+              element={
+                <>
+                  <HomePage />
+                  <DetailProject />
+                </>
+              }
+            />
+            <Route index element={<HomePage />} />
+            <Route path="projects" element={<Projects />} />{" "}
+            <Route
+              path="projects/:id/"
+              element={
+                <>
+                  <Projects />
+                  <DetailProject />
+                </>
+              }
+            />
+            <Route path="about-me" element={<AboutMe />} />
+          </Route>
         </Routes>
         <MainFooter />
       </BrowserRouter>
