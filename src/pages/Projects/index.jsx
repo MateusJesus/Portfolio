@@ -1,3 +1,6 @@
+import styled from "styled-components";
+import MyProjects from "@/components/MyProjetcs";
+
 export default function Projects() {
-  return <h1>Projetos</h1>;
+  return <MyProjects title="Meus " dest="Projetos" filter={false} />;
 }

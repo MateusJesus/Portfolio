@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import RedirectButton from "../../Buttons/RedirectButton";
+import { motion } from "framer-motion";
 
 const ItemProjectStyled = styled.li`
   display: flex;
@@ -38,6 +40,7 @@ const ItemProjectStyled = styled.li`
   .description {
     color: var(--text);
     font-size: 0.9em;
+    height: 2em;
     line-height: 1.4;
     margin-bottom: 1em;
   }
@@ -65,24 +68,35 @@ const LinkCard = styled.div`
 `;
 
 export default function ItemProject({ project }) {
-  
+  const id = project.id;
   return (
-    <ItemProjectStyled>
-      <div className="image">
-        <img src={project.image} alt={project.title} />
-      </div>
-      <p className="description">{project.shortDescription}</p>
-      <LinkCard>
-        <a
-          className="link"
-          href={project.website}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Mais detalhes
-        </a>
-        <span>→</span>
-      </LinkCard>
-    </ItemProjectStyled>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: .4,
+        delay: `.${id}`,
+        stiffness: 100,
+        damping: 20,
+      }}
+    >
+      <ItemProjectStyled>
+        <div className="image">
+          <img src={project.image} alt={project.title} />
+        </div>
+        <p className="description">{project.shortDescription}</p>
+        <LinkCard>
+          <a
+            className="link"
+            href={project.website}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Mais detalhes
+          </a>
+          <RedirectButton href={project.website}>Visitar site</RedirectButton>
+        </LinkCard>
+      </ItemProjectStyled>
+    </motion.div>
   );
 }

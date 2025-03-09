@@ -1,23 +1,35 @@
+import { Link } from "react-router";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const ActionButtonStyled = styled.button`
-  padding: 0.5em 1em;
-  background: none;
-  font-size: 20;
-  font-weight: 400;
-  cursor: pointer;
-  color: var(--dest);
-  border: 1px solid var(--dest);
-  border-radius: 10px;
-  transition: box-shadow .3s ease-in-out, background .3s ease-in-out, color .2s ease-in-out;
-
-  &:hover {
-    color: var(--bg);
-    background: var(--dest);
-    box-shadow: 0 0 10px var(--destOP);
+const ActionButtonStyled = styled.div`
+  .action_button {
+    padding: 0.5em 1em;
+    background: none;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--dest);
+    border: 1px solid var(--dest);
+    border-radius: 10px;
   }
 `;
 
-export default function ActionButton({ children }) {
-  return <ActionButtonStyled>{children}</ActionButtonStyled>;
+export default function ActionButton({ children, link }) {
+  return (
+    <Link to={link}>
+      <ActionButtonStyled>
+        <motion.div
+          className="action_button"
+          whileHover={{
+            boxShadow: "0 0 10px var(--destOP)",
+            color: "var(--bg-card)",
+            backgroundColor: "var(--dest)",
+          }}
+          transition={{ duration: 0.2 }}
+        >
+          {children}
+        </motion.div>
+      </ActionButtonStyled>
+    </Link>
+  );
 }

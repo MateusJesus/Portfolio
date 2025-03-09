@@ -1,0 +1,38 @@
+{
+  "aboutMe": [
+    {
+      "id": 1,
+      "title": "Minhas ",
+      "dest": "especialidades",
+      "content": [
+        "HTML5 e CSS3 (com técnicas de responsividade e acessibilidade)",
+        "JavaScript (ES6+)",
+        "ReactJS (Componentização, Hooks, React Router DOM e Consumo de APIs)",
+        "PHP (básico) para integração Back-End",
+        "Git/GitHub para versionamento de código",
+        "Figma para prototipagem e criação de interfaces"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Estudando ",
+      "dest": "atualmente",
+      "content": [
+        "Desenvolvimento de Progressive Web Apps (PWA)",
+        "Integração com APIs REST",
+        "Boas práticas de Clean Code",
+        "Design System com Styled Components",
+        "NextJS"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Objetivo ",
+      "dest": "profissional",
+      "content": [
+        "Meu objetivo é me tornar um Desenvolvedor Front-End especializado em React, criando interfaces modernas que proporcionem experiências incríveis para os usuários.",
+        "Estou em busca de oportunidades como Desenvolvedor Júnior para aplicar meus conhecimentos, colaborar em projetos e crescer profissionalmente na área de tecnologia."
+      ]
+    }
+  ]
+}

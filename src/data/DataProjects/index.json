@@ -57,7 +57,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet leo ac nibh imperdiet, et pellentesque mauris mattis. Integer ullamcorper dapibus metus, id tempor velit elementum commodo. Nulla eget nisi ornare, pharetra leo eu, congue nunc. Cras mollis nibh erat, tincidunt blandit nisi tincidunt id. Proin et dignissim purus, ac aliquam tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "website": "https://mateusjesus.github.io/FM4-FAQ-accordion/",
       "github": "https://github.com/mateusjesus/FM4-FAQ-accordion",
-      "image": "/srsrc/assets/imgpages/FMfaq.png",
+      "image": "/src/assets/imgpages/FMfaq.png",
       "featured": false
     },
     {

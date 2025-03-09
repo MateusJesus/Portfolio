@@ -6,7 +6,7 @@ import ActionButton from "../Buttons/ActionButton";
 import { motion } from "framer-motion";
 
 const HeaderStyled = styled.header`
-  z-index: 1;
+  z-index: 2;
   font-weight: 300;
   user-select: none;
   height: 70px;
@@ -14,10 +14,10 @@ const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid #333333 1px;
   width: 100%;
   backdrop-filter: blur(10px);
   background-color: rgba(36, 36, 36, 0.7);
+  border-bottom: solid var(--color-hr) 1px;
 
   .cab {
     max-width: 1080px;
@@ -38,17 +38,29 @@ const HeaderStyled = styled.header`
     gap: 3em;
     list-style: none;
     padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      cursor: pointer;
+    }
   }
 
   .slider {
     position: absolute;
-    bottom: -26px;
+    bottom: 0px;
     height: 2px;
     width: 100%;
     box-shadow: 0 0 10px var(--dest);
     background: var(--dest);
     //border-radius: 1px;
   }
+`;
+
+const ButtonStyled = styled.div`
+  display: flex;
+  font-size: 16px;
 `;
 
 export default function MainHeader() {
@@ -67,11 +79,12 @@ export default function MainHeader() {
         </Link>
         <ul className="NavButtons">
           {navPages.map((item, index) => (
-            <li key={index}>
-              <NavButton
-                path={item.path}
-                className={location.pathname === item.path ? "active" : ""}
-              >
+            <NavButton
+              key={index}
+              path={item.path}
+              className={location.pathname === item.path ? "active" : ""}
+            >
+              <li>
                 {item.text}
                 {location.pathname === item.path ? (
                   <motion.div
@@ -83,11 +96,13 @@ export default function MainHeader() {
                 ) : (
                   ""
                 )}
-              </NavButton>
-            </li>
+              </li>
+            </NavButton>
           ))}
         </ul>
-        <ActionButton>Contrate-me</ActionButton>
+        <ButtonStyled>
+          <ActionButton>Contate-me</ActionButton>
+        </ButtonStyled>
       </nav>
     </HeaderStyled>
   );
