@@ -1,4 +1,4 @@
-import Technologies from "@/components/technologies";
+import Technologies from "@/components/Technologies";
 import Introduction from "@/components/Introduction";
 import MyProjects from "../../components/MyProjetcs";
 import styled from "styled-components";
