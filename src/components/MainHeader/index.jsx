@@ -54,7 +54,6 @@ const HeaderStyled = styled.header`
     width: 100%;
     box-shadow: 0 0 10px var(--dest);
     background: var(--dest);
-    //border-radius: 1px;
   }
 `;
 
@@ -106,7 +105,15 @@ export default function MainHeader() {
             ))}
           </ul>
           <ButtonStyled>
-            <ActionButton>Contate-me</ActionButton>
+            <ActionButton
+              link={
+                location.pathname === "/"
+                  ? "/contact"
+                  : location.pathname + "/contact"
+              }
+            >
+              Contate-me
+            </ActionButton>
           </ButtonStyled>
         </nav>
       </HeaderStyled>

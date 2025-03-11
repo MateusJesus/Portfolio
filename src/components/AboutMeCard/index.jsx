@@ -41,9 +41,9 @@ const ListContentStyled = styled.div`
   li {
     .content {
       display: flex;
-      align-items: center;
+      align-items: initial;
       .icon_content {
-        margin-right: 1.5em;
+        margin: 1.55em 1.5em 0 0;
         font-size: 5px;
         color: transparent;
         border: 1px solid var(--dest);

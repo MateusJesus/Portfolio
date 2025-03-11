@@ -13,6 +13,7 @@ const Overlay = styled.div`
 
 const Dialog = styled.dialog`
   padding: 0;
+  width: 600px;
   position: fixed;
   z-index: 3;
   top: 0;
@@ -21,16 +22,17 @@ const Dialog = styled.dialog`
   border: none;
 `;
 
-const Modal = ({ children }) => {
+const Modal = ({ children, stopClose }) => {
   const navigate = useNavigate();
+
   const onClose = () => {
-    navigate(-1);
+    stopClose ? null : navigate(-1);
   };
 
   return (
     <>
-      <Overlay onClick={onClose}/>
-        <Dialog open>{children}</Dialog>
+      <Overlay onClick={onClose} />
+      <Dialog open>{children}</Dialog>
     </>
   );
 };

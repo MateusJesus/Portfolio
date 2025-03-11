@@ -2,6 +2,8 @@ import styled from "styled-components";
 import RedirectButton from "../../Buttons/RedirectButton";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ItemProjectStyled = styled.li`
   flex-direction: column;
@@ -68,7 +70,7 @@ const LinkCard = styled.div`
   }
 `;
 
-export default function ItemProject({ project }) {
+export default function ItemProject({ filter, project }) {
   const id = project.id;
   return (
     <motion.div
@@ -87,8 +89,15 @@ export default function ItemProject({ project }) {
         </div>
         <p className="description">{project.shortDescription}</p>
         <LinkCard>
-          <Link to={`${project.id}`}>Mais detalhes</Link>
-          <RedirectButton href={project.website}>Visitar site</RedirectButton>
+          <Link to={`proj/${project.id}`}>
+            Mais detalhes
+          </Link>{" "}
+          <RedirectButton
+            icon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+            href={project.website}
+          >
+            Visitar site
+          </RedirectButton>
         </LinkCard>
       </ItemProjectStyled>
     </motion.div>

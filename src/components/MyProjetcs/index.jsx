@@ -46,7 +46,7 @@ export default function MyProjects({ title, dest, filter }) {
             ? DataProjects.projetos.filter((project) => project.featured)
             : DataProjects.projetos
           ).map((project) => (
-            <ItemProject key={project.id} project={project} />
+            <ItemProject filter={filter} key={project.id} project={project} />
           ))}
         </ul>
         {filter && (

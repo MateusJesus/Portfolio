@@ -67,7 +67,7 @@ export default function HomePage() {
             <SocialStyled className="contato">
               <a
                 className="link"
-                href="https://github.com/MateusJesus"
+                href="https://wa.me/5569992948489"
                 target="_blank"
                 rel="noopener noreferrer"
               >

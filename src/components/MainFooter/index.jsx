@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import background_footer from "@/assets/background_footer.svg";
 import logo from "@/assets/logo.png";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -65,6 +65,7 @@ const FooterContactStyled = styled.div`
 `;
 
 export default function MainFooter() {
+  const location = useLocation();
   return (
     <>
       <FooterBackground src={background_footer} />
@@ -74,7 +75,17 @@ export default function MainFooter() {
           <p>
             Estou disponível para colaborações, freelas ou oportunidades de
             <br />
-            trabalho, <Link className="dest">entre em contato comigo!</Link>
+            trabalho,{" "}
+            <Link
+              to={
+                location.pathname === "/"
+                  ? "/contact"
+                  : location.pathname + "/contact"
+              }
+              className="dest"
+            >
+              entre em contato comigo!
+            </Link>
           </p>
         </TalkMeStyled>
         <hr />{" "}
