@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import DataProjects from "@/data/DataProjects";
-import ItemProject from "./ItemProject";
+import ItemProject from "./itemProject";
 import ActionButton from "../Buttons/ActionButton";
 import { motion } from "framer-motion";
 
