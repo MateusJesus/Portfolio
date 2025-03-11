@@ -3,70 +3,70 @@
     {
       "id": 1,
       "name": "html",
-      "image": "/src/assets/icontec/html.png",
+      "image": "/assets/icontec/html.png",
       "icon": "faHtml5",
       "alt": "Logo do html5"
     },
     {
       "id": 2,
       "name": "css",
-      "image": "/src/assets/icontec/css.png",
+      "image": "/assets/icontec/css.png",
       "icon": "faCss3Alt",
       "alt": "Logo do css"
     },
     {
       "id": 3,
       "name": "javascript",
-      "image": "/src/assets/icontec/javascript.png",
+      "image": "/assets/icontec/javascript.png",
       "icon": "faJs",
       "alt": "Logo do javascript"
     },
     {
       "id": 4,
       "name": "php",
-      "image": "/src/assets/icontec/php.png",
+      "image": "/assets/icontec/php.png",
       "icon": "faPhp",
       "alt": "Logo do php"
     },
     {
       "id": 5,
       "name": "mysql",
-      "image": "/src/assets/icontec/mysql.png",
+      "image": "/assets/icontec/mysql.png",
       "icon": "faDatabase",
       "alt": "Logo do mysql"
     },
     {
       "id": 6,
       "name": "xampp",
-      "image": "/src/assets/icontec/xampp.png",
+      "image": "/assets/icontec/xampp.png",
       "icon": false,
       "alt": "Logo do xampp"
     },
     {
       "id": 7,
       "name": "bootstrap",
-      "image": "/src/assets/icontec/bootstrap.png",
+      "image": "/assets/icontec/bootstrap.png",
       "icon": "faBootstrap",
       "alt": "Logo do bootstrap"
     },
     {
       "id": 8,
       "name": "vscode",
-      "image": "/src/assets/icontec/vscode.png",
+      "image": "/assets/icontec/vscode.png",
       "icon": "faCode",
       "alt": "Logo do vscode"
     },
     {
       "id": 9,
       "name": "figma",
-      "image": "/src/assets/icontec/figma.png",
+      "image": "/assets/icontec/figma.png",
       "icon": "faFigma",
       "alt": "Logo do figma"
     },
     {
       "id": 10,
       "name": "react",
-      "image": "/src/assets/icontec/react.png",
+      "image": "/assets/icontec/react.png",
       "icon": "faReact",
       "alt": "Logo do React"
     }

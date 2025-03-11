@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import background_footer from "@/assets/background_footer.svg";
-import logo from "@/assets/logo.png";
+import background_footer from "/assets/background_footer.svg";
+import logo from "/assets/logo.png";
 import { Link, useLocation } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";

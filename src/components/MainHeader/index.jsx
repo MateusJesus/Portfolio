@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "@/assets/logo.png";
+import logo from "/assets/logo.png";
 import NavButton from "../Buttons/NavButton";
 import { Link, Outlet, useLocation } from "react-router";
 import ActionButton from "../Buttons/ActionButton";

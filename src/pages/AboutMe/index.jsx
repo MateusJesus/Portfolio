@@ -1,14 +1,11 @@
-import perfil from "@/assets/perfil.png";
+import perfil from "/assets/perfil.png";
 import Introduction from "@/components/Introduction";
 import DataAboutMe from "@/data/DataAboutMe";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import AboutMeCard from "../../components/AboutMeCard";
 
-const IntroductionStyled = styled.div`
-
-`;
+const IntroductionStyled = styled.div``;
 
 export default function AboutMe() {
   return (
@@ -59,8 +56,6 @@ export default function AboutMe() {
           </div>
         </motion.div>
       </Introduction>
-
-      {/* Animação de Scroll */}
       <ul>
         {DataAboutMe?.aboutMe?.map((item) => (
           <AboutMeCard key={item.id} item={item} />

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import background1 from "@/assets/background_tec-top.svg";
-import background2 from "@/assets/background_tec-bottom.svg";
+import background1 from "/assets/background_tec-top.svg";
+import background2 from "/assets/background_tec-bottom.svg";
 import DataTechnogies from "@/data/DataTechnologies";
 import ItemTec from "./itemTec";
 import { motion, useInView } from "framer-motion";

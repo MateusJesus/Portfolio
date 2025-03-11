@@ -3,14 +3,13 @@ import Introduction from "@/components/Introduction";
 import MyProjects from "../../components/MyProjetcs";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import perfil from "@/assets/perfil.png";
+import perfil from "/assets/perfil.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWhatsapp,
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-
 
 const SocialStyled = styled.div`
   display: flex;
@@ -109,7 +108,7 @@ export default function HomePage() {
         </motion.div>
       </Introduction>
       <Technologies />
-      <MyProjects title="Projetos " dest="em destaque" filter={true} />;
+      <MyProjects title="Projetos " dest="em destaque" filter={true} />
     </>
   );
 }
