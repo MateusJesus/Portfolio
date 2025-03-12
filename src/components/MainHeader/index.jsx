@@ -65,14 +65,10 @@ const HeaderStyled = styled.header`
 
   .slider {
     position: absolute;
+    background-color: var(--dest);
     bottom: 0px;
     height: 2px;
     width: 100%;
-    @media (max-width: 1000px) {
-      width: 2px;
-      height: 10px;
-      background: var(--dest);
-    }
   }
 
   @media (max-width: 1000px) {
