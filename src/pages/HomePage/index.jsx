@@ -13,12 +13,16 @@ import {
 
 const HomepageStyled = styled.div`
   .introduction {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-      gap: 4em;
+    gap: 4em;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     @media (max-width: 1000px) {
+      .text{
+        font-size: 18px;
+      }
+      margin: 5em 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -79,7 +83,7 @@ export default function HomePage() {
               <h1 className="title">
                 DESENVOLVEDOR <strong className="dest">FRONTEND</strong>
               </h1>
-              <p className="paragraf">
+              <p className="text">
                 Olá! Meu nome é Mateus de Jesus, tenho 20 anos e estou estudando
                 programação há mais de um ano com o objetivo de me tornar um
                 desenvolvedor Front-end!

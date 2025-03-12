@@ -7,12 +7,16 @@ import AboutMeCard from "../../components/AboutMeCard";
 
 const IntroductionStyled = styled.div`
   .introduction {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     gap: 4em;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     @media (max-width: 1000px) {
+      .text{
+       font-size: 19px; 
+      }
+      margin: 5em 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,7 +59,7 @@ export default function AboutMe() {
               <h1 className="title">
                 DESENVOLVEDOR <strong className="dest">FRONTEND</strong>
               </h1>
-              <p>
+              <p className="text">
                 Tenho 20 anos e sou um desenvolvedor Front-End há mais de um
                 ano. Minha jornada na tecnologia começou como Motion Designer,
                 criando animações e experiências visuais para marcas e projetos

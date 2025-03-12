@@ -20,6 +20,9 @@ const Dialog = styled.dialog`
   bottom: 0;
   background-color: transparent;
   border: none;
+  @media (max-width: 1000px) {
+    width: 90vw;
+  }
 `;
 
 const Modal = ({ children, stopClose }) => {

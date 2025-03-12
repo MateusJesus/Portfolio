@@ -20,20 +20,19 @@ const AboutMeCardStyled = styled.li`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 25em;
-  .title_text {
-    @media (max-width: 1000px) {
-      display: flex;
-      text-align: center;
-      width: 100%;
-      flex-direction: column;
-    }
-  }
+
   @media (max-width: 1000px) {
     display: flex;
     margin: 4em 0;
     gap: 1em;
     align-items: center;
     flex-direction: column;
+    .title_text {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+    }
   }
 `;
 
@@ -71,7 +70,7 @@ const ListContentStyled = styled.div`
 `;
 
 export default function AboutMeCard({ item }) {
-  const [dimensions, setDimensions] = useState({});
+  const [dimensions, setDimensions] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
@@ -83,7 +82,6 @@ export default function AboutMeCard({ item }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(dimensions);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { margin: "-150px" });
 

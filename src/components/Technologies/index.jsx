@@ -41,6 +41,7 @@ const TechnologiesStyled = styled.section`
     width: 100%;
     user-select: none;
   }
+
 `;
 
 const TecBackground = styled.img`
@@ -57,7 +58,7 @@ export default function Technologies() {
       <TechnologiesStyled ref={sectionRef}>
         <motion.div
           initial={{ y: -5 }}
-          animate={isInView ? { y: 0 } : { y: -5 }}
+          animate={isInView ? { y: -1 } : { y: -5 }}
           transition={{ duration: 1 }}
         >
           <TecBackground className="tec_background1" src={background1} />
@@ -65,7 +66,7 @@ export default function Technologies() {
         <motion.div
           className="tecnologias"
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animação inversa ao sair
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 1, type: "spring", stiffness: 80 }}
         >
           <h1 className="title">Minhas tecnologias</h1>
