@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +20,21 @@ const AboutMeCardStyled = styled.li`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 25em;
-  max-width: 100%;
+  .title_text {
+    @media (max-width: 1000px) {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 1000px) {
+    display: flex;
+    margin: 4em 0;
+    gap: 1em;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const ListContentStyled = styled.div`
@@ -36,6 +50,9 @@ const ListContentStyled = styled.div`
     padding: 15px 20px;
     background-color: var(--bg-card);
     gap: 0.5em;
+    @media (max-width: 1000px) {
+      text-align: initial;
+    }
   }
 
   li {
@@ -54,13 +71,26 @@ const ListContentStyled = styled.div`
 `;
 
 export default function AboutMeCard({ item }) {
+  const [dimensions, setDimensions] = useState({});
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log(dimensions);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { margin: "-150px" });
 
   return (
     <AboutMeCardStyled ref={sectionRef}>
       {" "}
-      {item.id === 2 && (
+      {item.id === 2 && dimensions >= 1000 && (
         <Illustration
           circle={true}
           icon1={<FontAwesomeIcon icon={faDatabase} />}
@@ -69,6 +99,7 @@ export default function AboutMeCard({ item }) {
         />
       )}
       <motion.div
+        className="title_text"
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
         transition={{
@@ -97,6 +128,14 @@ export default function AboutMeCard({ item }) {
           </ul>
         </ListContentStyled>
       </motion.div>
+      {item.id === 2 && dimensions <= 1000 && (
+        <Illustration
+          circle={true}
+          icon1={<FontAwesomeIcon icon={faDatabase} />}
+          icon2={<FontAwesomeIcon icon={faServer} />}
+          icon3={<FontAwesomeIcon icon={faBookOpen} />}
+        />
+      )}
       {item.id === 1 && (
         <Illustration
           icon1={<FontAwesomeIcon icon={faReact} />}

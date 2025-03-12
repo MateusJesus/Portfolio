@@ -11,6 +11,22 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+const HomepageStyled = styled.div`
+  .introduction {
+    height: 100vh;
+    display: grid;
+      gap: 4em;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media (max-width: 1000px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+  }
+`;
+
 const SocialStyled = styled.div`
   display: flex;
   align-items: center;
@@ -38,77 +54,83 @@ const SocialStyled = styled.div`
     color: var(--dest);
     box-shadow: 0 0 10px var(--destOP);
   }
+
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
 `;
 
 export default function HomePage() {
   return (
-    <>
+    <HomepageStyled>
       <Introduction>
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 2,
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-          }}
-        >
-          <div>
-            <h1 className="title">
-              DESENVOLVEDOR <strong className="dest">FRONTEND</strong>
-            </h1>
-            <p>
-              Olá! Meu nome é Mateus de Jesus, tenho 20 anos e estou estudando
-              programação há mais de um ano com o objetivo de me tornar um
-              desenvolvedor Front-end!
-            </p>
-            <SocialStyled className="contato">
-              <a
-                className="link"
-                href="https://wa.me/5569992948489"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faWhatsapp} />
-              </a>
-              <a
-                className="link"
-                href="https://github.com/MateusJesus"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a
-                className="link"
-                href="https://www.linkedin.com/in/mateus-jesus-256a89241/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </SocialStyled>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 2,
-            delay: 0.1,
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-          }}
-        >
-          <div>
-            <img src={perfil} alt="Imagem de perfil " />
-          </div>
-        </motion.div>
+        <div className="introduction">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 2,
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+            }}
+          >
+            <div>
+              <h1 className="title">
+                DESENVOLVEDOR <strong className="dest">FRONTEND</strong>
+              </h1>
+              <p className="paragraf">
+                Olá! Meu nome é Mateus de Jesus, tenho 20 anos e estou estudando
+                programação há mais de um ano com o objetivo de me tornar um
+                desenvolvedor Front-end!
+              </p>
+              <SocialStyled className="contato">
+                <a
+                  className="link"
+                  href="https://wa.me/5569992948489"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                </a>
+                <a
+                  className="link"
+                  href="https://github.com/MateusJesus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                  className="link"
+                  href="https://www.linkedin.com/in/mateus-jesus-256a89241/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </SocialStyled>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 2,
+              delay: 0.1,
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+            }}
+          >
+            <div>
+              <img src={perfil} alt="Imagem de perfil " />
+            </div>
+          </motion.div>
+        </div>
       </Introduction>
       <Technologies />
       <MyProjects title="Projetos " dest="em destaque" filter={true} />
-    </>
+    </HomepageStyled>
   );
 }

@@ -9,11 +9,10 @@ import { useRef } from "react";
 const TechnologiesStyled = styled.section`
   background-color: var(--dest);
   margin: 0;
-  position: relative;
 
   .tecnologias {
     margin: auto;
-    padding: 12em 0;
+    margin: 4em auto;
     font-family: var(--ff-tec);
     font-size: 12px;
     text-transform: uppercase;
@@ -22,11 +21,10 @@ const TechnologiesStyled = styled.section`
     max-width: 1080px;
     flex-direction: column;
     align-items: initial;
-  }
-
-  .tecnologias .title {
-    color: var(--bg);
-    font-weight: 400;
+    .title {
+      color: var(--bg);
+      font-weight: 400;
+    }
   }
 
   .lista {
@@ -39,7 +37,7 @@ const TechnologiesStyled = styled.section`
 
   .tec_background1,
   .tec_background2 {
-    position: absolute;
+    display: block;
     width: 100%;
     user-select: none;
   }
@@ -58,8 +56,8 @@ export default function Technologies() {
     <>
       <TechnologiesStyled ref={sectionRef}>
         <motion.div
-          initial={{ y: -15 }}
-          animate={isInView ? { y: 0 } : { y: -15 }}
+          initial={{ y: -5 }}
+          animate={isInView ? { y: 0 } : { y: -5 }}
           transition={{ duration: 1 }}
         >
           <TecBackground className="tec_background1" src={background1} />
@@ -95,9 +93,8 @@ export default function Technologies() {
           initial={{ y: -100 }}
           animate={isInView ? { y: -116 } : { y: -100 }}
           transition={{ duration: 1 }}
-        >
-          <TecBackground className="tec_background2" src={background2} />
-        </motion.div>
+        ></motion.div>{" "}
+        <TecBackground className="tec_background2" src={background2} />
       </TechnologiesStyled>
     </>
   );

@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 const HomePageStyled = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  height: 100vh;
   img {
-    height: 30em;
+    min-height: 100%;
+    max-height: 30em;
+    max-width: 100%;
+    max-width: 100%;
+  }
+  @media (max-width: 1000px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
 `;
 

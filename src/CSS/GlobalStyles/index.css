@@ -11,6 +11,7 @@ section {
 .layout {
   max-width: 1080px;
   margin: auto;
+  padding: 0 2em;
 }
 
 .title {

@@ -9,7 +9,13 @@ const MyProjectsStyled = styled.section`
   ul {
     display: grid;
     gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;    
+    @media (max-width: 1000px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 `;
 

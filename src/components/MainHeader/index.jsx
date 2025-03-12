@@ -20,6 +20,7 @@ const HeaderStyled = styled.header`
   border-bottom: solid var(--color-hr) 1px;
 
   .cab {
+    padding: 0 2em;
     max-width: 1080px;
     width: 100vw;
     display: flex;
