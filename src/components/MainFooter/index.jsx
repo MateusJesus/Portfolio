@@ -47,6 +47,15 @@ const MainFooterStyled = styled.footer`
       background-color: var(--dest);
     }
   }
+  .licence {
+    border-top: 1px solid #0e0e0e;
+    font-weight: 200;
+    background-color: #0f0f0f;
+    font-size: 12px;
+    padding: 1em;
+    line-height: 1em;
+    text-align: center;
+  }
 `;
 
 const TalkMeStyled = styled.div`
@@ -106,6 +115,7 @@ const FooterContactStyled = styled.div`
       font-size: 15px;
     }
   }
+
   @media (max-width: 1000px) {
     gap: 1em;
     display: flex;
@@ -115,7 +125,6 @@ const FooterContactStyled = styled.div`
       display: none;
     }
     .contact {
-
       .title {
         font-size: 13px;
       }
@@ -210,6 +219,9 @@ export default function MainFooter() {
             </a>
           </div>
         </FooterContactStyled>
+        <div className="licence">
+          © 2025 Mateus de Jesus. Todos os direitos reservados.
+        </div>
       </MainFooterStyled>
     </>
   );
