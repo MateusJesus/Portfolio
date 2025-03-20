@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCircle,
-  faBookOpen,
-  faBriefcase,
-  faBuilding,
-  faDesktop,
-  faServer,
-  faDatabase,
-  faCode,
-} from "@fortawesome/free-solid-svg-icons";
-import { faReact, faJs } from "@fortawesome/free-brands-svg-icons";
+  FaCircle,
+  FaBookOpen,
+  FaBriefcase,
+  FaBuilding,
+  FaDesktop,
+  FaServer,
+  FaDatabase,
+  FaCode,
+  FaReact,
+  FaJs,
+} from "react-icons/fa6";
 import Illustration from "../Illustration";
 
 const AboutMeCardStyled = styled.li`
@@ -56,13 +56,14 @@ const ListContentStyled = styled.div`
 
   li {
     .content {
-      display: flex;
-      align-items: initial;
+      display: grid;
+      grid-template-columns: 1fr 100%;
       .icon_content {
-        margin: 1.55em 1.5em 0 0;
+        display: block;
+        margin: 8px 10px 0 0;
         font-size: 5px;
         color: transparent;
-        border: 1px solid var(--dest);
+        border: var(--dest) solid 1px;
         border-radius: 10px;
       }
     }
@@ -87,13 +88,12 @@ export default function AboutMeCard({ item }) {
 
   return (
     <AboutMeCardStyled ref={sectionRef}>
-      {" "}
       {item.id === 2 && dimensions >= 1000 && (
         <Illustration
           circle={true}
-          icon1={<FontAwesomeIcon icon={faDatabase} />}
-          icon2={<FontAwesomeIcon icon={faServer} />}
-          icon3={<FontAwesomeIcon icon={faBookOpen} />}
+          icon1={<FaDatabase />}
+          icon2={<FaServer />}
+          icon3={<FaBookOpen />}
         />
       )}
       <motion.div
@@ -113,39 +113,33 @@ export default function AboutMeCard({ item }) {
         </h1>
         <ListContentStyled>
           <ul>
-            {item.content.map((contet, index) => {
-              return (
-                <li key={index}>
-                  <div className="content">
-                    <FontAwesomeIcon className="icon_content" icon={faCircle} />
-                    {contet}
-                  </div>
-                </li>
-              );
-            })}
+            {item.content.map((content, index) => (
+              <li key={index}>
+                <div className="content">
+                  <FaCircle className="icon_content" />
+                  {content}
+                </div>
+              </li>
+            ))}
           </ul>
         </ListContentStyled>
       </motion.div>
       {item.id === 2 && dimensions <= 1000 && (
         <Illustration
           circle={true}
-          icon1={<FontAwesomeIcon icon={faDatabase} />}
-          icon2={<FontAwesomeIcon icon={faServer} />}
-          icon3={<FontAwesomeIcon icon={faBookOpen} />}
+          icon1={<FaDatabase />}
+          icon2={<FaServer />}
+          icon3={<FaBookOpen />}
         />
       )}
       {item.id === 1 && (
-        <Illustration
-          icon1={<FontAwesomeIcon icon={faReact} />}
-          icon2={<FontAwesomeIcon icon={faJs} />}
-          icon3={<FontAwesomeIcon icon={faCode} />}
-        />
+        <Illustration icon1={<FaReact />} icon2={<FaJs />} icon3={<FaCode />} />
       )}
       {item.id === 3 && (
         <Illustration
-          icon1={<FontAwesomeIcon icon={faBriefcase} />}
-          icon2={<FontAwesomeIcon icon={faBuilding} />}
-          icon3={<FontAwesomeIcon icon={faDesktop} />}
+          icon1={<FaBriefcase />}
+          icon2={<FaBuilding />}
+          icon3={<FaDesktop />}
         />
       )}
     </AboutMeCardStyled>

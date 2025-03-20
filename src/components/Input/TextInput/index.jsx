@@ -10,12 +10,12 @@ const TextInputStyled = styled.div`
     label {
       font-weight: 200;
       font-size: 15px;
+      margin-bottom: .4em;
     }
     input,
     textarea {
       overflow-x: hidden;
       color: var(--text-color);
-      margin-top: 0.3em;
       border-radius: 10px;
       resize: vertical;
       max-height: 100px;

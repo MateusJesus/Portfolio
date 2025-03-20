@@ -5,8 +5,7 @@ import { Link, Outlet, useLocation } from "react-router";
 import ActionButton from "../Buttons/ActionButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FaBars } from "react-icons/fa6";
 
 const HeaderStyled = styled.header`
   z-index: 2;
@@ -19,6 +18,7 @@ const HeaderStyled = styled.header`
   justify-content: center;
   width: 100%;
   border-bottom: solid var(--color-hr) 1px;
+
   .header-blur {
     position: absolute;
     width: 100%;
@@ -54,7 +54,6 @@ const HeaderStyled = styled.header`
     gap: 3em;
     list-style: none;
     padding: 0;
-
     li {
       height: 70px;
       display: flex;
@@ -92,10 +91,12 @@ const HeaderStyled = styled.header`
       }
       .menu_links {
         right: 0;
+        box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5), 0 0 0.25em currentColor;
         text-align: center;
         position: fixed;
-        display: block;
         width: 150px;
+        height: 100vh;
+        box-shadow: 1px 1px black;
         top: 70px;
         li {
           padding-right: 1em;
@@ -123,9 +124,25 @@ const ButtonStyled = styled.div`
   font-size: 16px;
 `;
 
+const Overlay = styled.div`
+  .Overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    z-index: -1;
+  }
+`;
+
 export default function MainHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dimensions, setDimensions] = useState(window.innerWidth);
+
+  const onClose = () => {
+    setMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -195,98 +212,114 @@ export default function MainHeader() {
               </ButtonStyled>
             </>
           ) : (
-            <div className="menu">
-              <div
-                onClick={() => setMenuOpen(!menuOpen)}
-                className={`menu_icon`}
-              >
-                <FontAwesomeIcon icon={faBars} />
-                <AnimatePresence initial={false}>
-                  {menuOpen && (
-                    <motion.div
-                      className="menu_icon"
-                      initial={{ opacity: 0 }}
-                      exit={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      style={{
-                        zIndex: -1,
-                        top: 0,
-                        backgroundColor: "var(--bg-card)",
-                        position: "absolute",
-                      }}
-                      transition={{
-                        duration: 0.2,
-                        type: "spring",
-                        stiffness: 150,
-                        damping: 20,
-                      }}
-                    />
-                  )}
-                </AnimatePresence>
-              </div>
-              <>
-                <AnimatePresence initial={false}>
-                  {menuOpen && (
-                    <motion.div
-                      className="menu_links"
-                      initial={{ x: 100 }}
-                      exit={{ x: 200 }}
-                      animate={{ x: 0 }}
-                      transition={{
-                        duration: 0.2,
-                        type: "spring",
-                        stiffness: 150,
-                        damping: 20,
-                      }}
-                    >
-                      <ul
-                        className="blur"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                      >
-                        {navPages.map((item, index) => (
-                          <NavButton
-                            key={index}
-                            path={item.path}
-                            className={
-                              location.pathname === item.path ? "active" : ""
-                            }
-                          >
-                            <li>{item.text}</li>{" "}
-                            {location.pathname === item.path ? (
-                              <motion.div
-                                className="slider"
-                                layoutId="underline"
-                                transition={{
-                                  type: "spring",
-                                  stiffness: 100,
-                                  damping: 20,
-                                }}
-                                style={{ transform: "none" }}
-                              />
-                            ) : (
-                              ""
-                            )}
-                          </NavButton>
-                        ))}
-                        <NavButton
-                          path={
-                            location.pathname === "/"
-                              ? "/contact"
-                              : location.pathname + "/contact"
-                          }
+            <>
+              <div className="menu">
+                <div
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className={`menu_icon`}
+                >
+                  <FaBars />
+                  <AnimatePresence initial={false}>
+                    {menuOpen && (
+                      <motion.div
+                        className="menu_icon"
+                        initial={{ opacity: 0 }}
+                        exit={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        style={{
+                          zIndex: -1,
+                          top: 0,
+                          backgroundColor: "var(--bg-card)",
+                          position: "absolute",
+                        }}
+                        transition={{
+                          duration: 0.2,
+                          type: "spring",
+                          stiffness: 150,
+                          damping: 20,
+                        }}
+                      />
+                    )}
+                  </AnimatePresence>
+                </div>
+                <>
+                  <AnimatePresence initial={false}>
+                    {menuOpen && (
+                      <>
+                        <motion.div
+                          className="menu_links blur"
+                          initial={{ x: 200 }}
+                          exit={{ x: 200 }}
+                          animate={{ x: 0 }}
+                          transition={{
+                            duration: 0.2,
+                            type: "spring",
+                            damping: 20,
+                          }}
                         >
-                          <li>Contate-me</li>
-                        </NavButton>
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </>
-            </div>
+                          <ul onClick={() => setMenuOpen(!menuOpen)}>
+                            {navPages.map((item, index) => (
+                              <NavButton
+                                key={index}
+                                path={item.path}
+                                className={
+                                  location.pathname === item.path
+                                    ? "active"
+                                    : ""
+                                }
+                              >
+                                <li>{item.text}</li>{" "}
+                                {location.pathname === item.path ? (
+                                  <motion.div
+                                    className="slider"
+                                    layoutId="underline"
+                                    transition={{
+                                      type: "spring",
+                                      stiffness: 100,
+                                      damping: 20,
+                                    }}
+                                    style={{ transform: "none" }}
+                                  />
+                                ) : (
+                                  ""
+                                )}
+                              </NavButton>
+                            ))}
+                            <NavButton
+                              path={
+                                location.pathname === "/"
+                                  ? "/contact"
+                                  : location.pathname + "/contact"
+                              }
+                            >
+                              <li>Contate-me</li>
+                            </NavButton>
+                          </ul>
+                        </motion.div>
+
+                        <Overlay onClick={onClose}>
+                          <motion.div
+                            className="Overlay"
+                            initial={{ opacity: 0 }}
+                            exit={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                              duration: 0.2,
+                              type: "spring",
+                              stiffness: 150,
+                              damping: 20,
+                            }}
+                          />
+                        </Overlay>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </>
+              </div>
+            </>
           )}
         </nav>
       </HeaderStyled>
-      <Outlet />
     </>
   );
 }

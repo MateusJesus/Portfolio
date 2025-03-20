@@ -4,35 +4,35 @@
       "id": 1,
       "name": "html",
       "image": "/assets/icontec/html.png",
-      "icon": "faHtml5",
+      "icon": "FaHtml5",
       "alt": "Logo do html5"
     },
     {
       "id": 2,
       "name": "css",
       "image": "/assets/icontec/css.png",
-      "icon": "faCss3Alt",
+      "icon": "FaCss3Alt",
       "alt": "Logo do css"
     },
     {
       "id": 3,
       "name": "javascript",
       "image": "/assets/icontec/javascript.png",
-      "icon": "faJs",
+      "icon": "FaJs",
       "alt": "Logo do javascript"
     },
     {
       "id": 4,
       "name": "php",
       "image": "/assets/icontec/php.png",
-      "icon": "faPhp",
+      "icon": "FaPhp",
       "alt": "Logo do php"
     },
     {
       "id": 5,
       "name": "mysql",
       "image": "/assets/icontec/mysql.png",
-      "icon": "faDatabase",
+      "icon": "FaDatabase",
       "alt": "Logo do mysql"
     },
     {
@@ -46,28 +46,28 @@
       "id": 7,
       "name": "bootstrap",
       "image": "/assets/icontec/bootstrap.png",
-      "icon": "faBootstrap",
+      "icon": "FaBootstrap",
       "alt": "Logo do bootstrap"
     },
     {
       "id": 8,
       "name": "vscode",
       "image": "/assets/icontec/vscode.png",
-      "icon": "faCode",
+      "icon": "VscVscode",
       "alt": "Logo do vscode"
     },
     {
       "id": 9,
       "name": "figma",
       "image": "/assets/icontec/figma.png",
-      "icon": "faFigma",
+      "icon": "FaFigma",
       "alt": "Logo do figma"
     },
     {
       "id": 10,
       "name": "react",
       "image": "/assets/icontec/react.png",
-      "icon": "faReact",
+      "icon": "FaReact",
       "alt": "Logo do React"
     }
   ]

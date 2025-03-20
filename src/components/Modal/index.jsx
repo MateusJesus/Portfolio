@@ -13,7 +13,8 @@ const Overlay = styled.div`
 
 const Dialog = styled.dialog`
   padding: 0;
-  width: 600px;
+  width: 550px;
+  max-height: 100vh;
   position: fixed;
   z-index: 3;
   top: 0;

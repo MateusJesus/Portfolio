@@ -3,13 +3,8 @@ import Introduction from "@/components/Introduction";
 import MyProjects from "../../components/MyProjetcs";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import perfil from "/assets/perfil.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faWhatsapp,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import perfil from "/assets/perfilAboutMe.png";
+import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HomepageStyled = styled.div`
   .introduction {
@@ -19,7 +14,7 @@ const HomepageStyled = styled.div`
     grid-template-columns: 1fr 1fr;
     align-items: center;
     @media (max-width: 1000px) {
-      .text{
+      .text {
         font-size: 18px;
       }
       margin: 5em 0;
@@ -95,7 +90,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faWhatsapp} />
+                  <FaWhatsapp />
                 </a>
                 <a
                   className="link"
@@ -103,7 +98,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faGithub} />
+                  <FaGithub />
                 </a>
                 <a
                   className="link"
@@ -111,7 +106,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} />
+                  <FaLinkedin />
                 </a>
               </SocialStyled>
             </div>

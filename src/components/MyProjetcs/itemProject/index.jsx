@@ -2,8 +2,8 @@ import styled from "styled-components";
 import RedirectButton from "../../Buttons/RedirectButton";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { TbError404 } from "react-icons/tb";
 
 const ItemProjectStyled = styled.li`
   flex-direction: column;
@@ -72,28 +72,37 @@ const LinkCard = styled.div`
 
 export default function ItemProject({ filter, project }) {
   const id = project.id;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.4,
-        delay: `.${id}`,
+        delay: `${
+          filter ? `.1${id}` : id.toString().length >= 2 ? `1.${id}` : `.${id}`
+        }`,
         stiffness: 100,
         damping: 20,
       }}
     >
       <ItemProjectStyled>
         <div className="image">
-          <img src={project.image} alt={project.title} />
+          {project.image ? (
+            <img
+              src={`https://lh3.googleusercontent.com/d/${project.image}`}
+              alt={project.title}
+              onError={(e) => (e.target.style.display = "none")}
+            />
+          ) : (
+            <TbError404 size={50} color="var(--text)" />
+          )}
         </div>
         <p className="description">{project.shortDescription}</p>
         <LinkCard>
-          <Link to={`proj/${project.id}`}>
-            Mais detalhes
-          </Link>{" "}
+          <Link to={`proj/${project.id}`}>Mais detalhes</Link>{" "}
           <RedirectButton
-            icon={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
+            icon={<FaArrowUpRightFromSquare />}
             href={project.website}
           >
             Visitar site

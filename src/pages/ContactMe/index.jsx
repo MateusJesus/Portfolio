@@ -3,12 +3,8 @@ import RedirectButton from "../../components/Buttons/RedirectButton";
 import { Link, useNavigate } from "react-router";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import {
-  faPaperPlane,
-  faCircleCheck,
-  faCircleXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaPaperPlane } from "react-icons/fa";
+import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
 import TextInput from "../../components/Input/TextInput";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -22,12 +18,13 @@ const ContactMeStyled = styled.div`
   hr {
     border: none;
     border-bottom: solid 1px var(--color-hr);
+    margin: 1em 0;
   }
 
   .textInput {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 1em;
   }
 
   .iconsPostSent {
@@ -213,7 +210,7 @@ export default function ContactMe() {
                       <Link to={-1}>Voltar</Link>
                       <RedirectButton
                         type="submit"
-                        icon={<FontAwesomeIcon icon={faPaperPlane} />}
+                        icon={<FaPaperPlane />}
                       >
                         Enviar
                       </RedirectButton>
@@ -229,14 +226,12 @@ export default function ContactMe() {
                 transition={{ duration: 0.5 }}
               >
                 {status === "success" ? (
-                  <FontAwesomeIcon
+                  <FaCircleCheck
                     className="icon success"
-                    icon={faCircleCheck}
                   />
                 ) : (
-                  <FontAwesomeIcon
+                  <FaCircleXmark
                     className="icon error"
-                    icon={faCircleXmark}
                   />
                 )}
               </motion.div>

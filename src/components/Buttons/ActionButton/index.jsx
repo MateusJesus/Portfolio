@@ -7,10 +7,12 @@ const ActionButtonStyled = styled.div`
     padding: 0.5em 1em;
     background: none;
     font-weight: 400;
+    margin: auto;
     cursor: pointer;
     color: var(--dest);
     border: 1px solid var(--dest);
     border-radius: 10px;
+    text-align:center;
   }
 `;
 
