@@ -8,12 +8,14 @@ const TextInputStyled = styled.div`
     display: flex;
     flex-direction: column;
     label {
-      font-weight: 200;
+      font-weight: 300;
       font-size: 15px;
-      margin-bottom: .4em;
+      margin-bottom: 0.4em;
     }
+
     input,
     textarea {
+      font-family: var(--ff);
       overflow-x: hidden;
       color: var(--text-color);
       border-radius: 10px;
@@ -25,10 +27,19 @@ const TextInputStyled = styled.div`
       border: 1px solid var(--text-color);
       outline: none;
     }
+
+    textarea::placeholder,
+    input::placeholder {
+      color: #ffffff;
+      opacity: 0.20;
+      font-weight: 200;
+    }
+
     input:focus,
     textarea:focus {
       border: 1px solid var(--dest);
     }
+
     textarea::-webkit-scrollbar {
       width: 5px;
     }
