@@ -19,13 +19,17 @@ const TextInputStyled = styled.div`
       overflow-x: hidden;
       color: var(--text-color);
       border-radius: 10px;
-      resize: vertical;
+      resize: none;
       max-height: 100px;
       min-height: 1.3em;
       padding: 0.5em;
       background-color: transparent;
       border: 1px solid var(--text-color);
       outline: none;
+    }
+
+    textarea{
+      height: 68px;
     }
 
     textarea::placeholder,

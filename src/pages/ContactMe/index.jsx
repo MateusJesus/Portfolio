@@ -14,11 +14,16 @@ const ContactMeStyled = styled.div`
   padding: 20px;
   background-color: var(--bg);
   color: var(--text-color);
-
+  margin: auto;
   hr {
     border: none;
     border-bottom: solid 1px var(--color-hr);
     margin: 1em 0;
+  }
+
+  .title{
+    text-align: center;
+    font-size: 28px;
   }
 
   .textInput {
@@ -163,10 +168,6 @@ export default function ContactMe() {
               ) : (
                 <>
                   <h1 className="title">Envie um email para mim!</h1>
-                  <p>
-                    Vamos conversar! Estou disponível para colaborações e
-                    projetos freelancer.
-                  </p>
                   <hr />
                   <form className="textInput" onSubmit={submit}>
                     <TextInput
@@ -208,10 +209,7 @@ export default function ContactMe() {
                     />
                     <div className="actions_project">
                       <Link to={-1}>Voltar</Link>
-                      <RedirectButton
-                        type="submit"
-                        icon={<FaPaperPlane />}
-                      >
+                      <RedirectButton type="submit" icon={<FaPaperPlane />}>
                         Enviar
                       </RedirectButton>
                     </div>
@@ -226,13 +224,9 @@ export default function ContactMe() {
                 transition={{ duration: 0.5 }}
               >
                 {status === "success" ? (
-                  <FaCircleCheck
-                    className="icon success"
-                  />
+                  <FaCircleCheck className="icon success" />
                 ) : (
-                  <FaCircleXmark
-                    className="icon error"
-                  />
+                  <FaCircleXmark className="icon error" />
                 )}
               </motion.div>
             )}
