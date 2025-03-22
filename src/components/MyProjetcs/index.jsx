@@ -44,10 +44,10 @@ export default function MyProjects({ title, dest, filter }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const API_URL = "https://portfolio-api-qdsy.onrender.com";
+  const API_URL = "https://portfolio-api-production-c2ff.up.railway.app";
   useEffect(() => {
-    fetch(API_URL+"/api", {
-      method: "POST",
+    fetch(API_URL+"/api-get", {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         "X-API-PASSWORD": "q1w2e3r4t5",
